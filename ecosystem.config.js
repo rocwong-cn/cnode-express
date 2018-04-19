@@ -29,7 +29,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:rocwangv/cnode-express.git',
       path : '/home/www/cnode',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
 };
