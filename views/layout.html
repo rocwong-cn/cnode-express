@@ -1,0 +1,31 @@
+<html>
+<head>
+    <% if (typeof title !== 'undefined') { %>
+    <title><%= title %></title>
+    <% } else { %>
+    <title>CNode社区</title>
+    <% } %>
+    <link href="/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <a class="logo" href="/">
+            <img src="https://cnodejs.org/public/images/cnodejs_light.svg">
+        </a>
+        <form id='search_form' class='navbar-search' action="/search">
+            <input type='text' id='q' name='q' class='search-query span3' value=''/>
+        </form>
+        <ul class="menu">
+            <li><a href="/">首页</a></li>
+            <li><a href="/">新手入门</a></li>
+            <li><a href="/">API</a></li>
+            <li><a href="/">关于</a></li>
+            <li><a href="/">注册</a></li>
+            <li><a href="/">登录</a></li>
+        </ul>
+    </div>
+</header>
+<%- body %>
+</body>
+</html>
