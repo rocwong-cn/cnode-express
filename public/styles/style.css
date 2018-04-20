@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-color: #e1e1e1;
 }
 
 a {
@@ -14,6 +15,15 @@ header {
     height: 50px;
 }
 
+#main {
+    max-width: 1440px;
+    width: 90%;
+    margin: 15px auto;
+    min-width: 960px;
+    min-height: 400px;
+}
+
+/*navbar*/
 .navbar {
     margin: auto 30px;
     padding: 5px;
@@ -40,7 +50,7 @@ header {
 }
 
 .navbar .navbar-search {
-    margin-top:6px;
+    margin-top: 6px;
     float: left;
     margin-bottom: 0;
 }
@@ -53,7 +63,7 @@ header {
     color: #666;
     margin-top: 2px;
     width: 200px;
-    height: 25px;
+    height: 20px;
     border-radius: 15px;
     -webkit-border-radius: 15px;
     transition: all 0.5s;
@@ -69,7 +79,8 @@ header {
 .navbar .search-query:focus, .navbar .search-query.focused {
     background-color: white;
 }
-.navbar .menu{
+
+.navbar .menu {
     display: inline;
     float: right;
     list-style: none;
@@ -77,14 +88,19 @@ header {
     height: 40px;
     line-height: 40px;
 }
-.navbar .menu>li{
+
+.navbar .menu > li {
     float: left;
 }
-.navbar .menu>li>a{
+
+.navbar .menu > li > a {
     text-decoration: none;
     color: #ccc;
-    padding:0 10px;
+    padding: 0 10px;
 }
-.navbar .menu>li>a:hover{
+
+.navbar .menu > li > a:hover {
     color: #fff;
 }
+
+/*sidebar*/

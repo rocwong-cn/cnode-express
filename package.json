@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
-    "deploy": "pm2 deploy ecosystem.config.js production"
+    "deploy": "pm2 deploy ecosystem.config.js production",
+    "build": "./node_modules/loader-builder/bin/builder views ."
   },
   "dependencies": {
     "body-parser": "~1.17.1",
@@ -13,6 +14,9 @@
     "ejs": "^2.5.9",
     "express": "~4.15.2",
     "express-ejs-layouts": "^2.4.0",
+    "loader": "^2.1.1",
+    "loader-builder": "^2.6.0",
+    "lodash": "^4.17.5",
     "morgan": "~1.8.1",
     "serve-favicon": "~2.4.2"
   },
@@ -28,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/rocwangv/cnodejs-express/issues"
   },
-  "homepage": "https://github.com/rocwangv/cnodejs-express#readme"
+  "homepage": "https://github.com/rocwangv/cnodejs-express#readme",
+  "devDependencies": {
+    "loader-connect": "^1.0.1"
+  }
 }
