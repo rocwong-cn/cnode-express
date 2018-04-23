@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% if (typeof title !== 'undefined') { %>
-    <title><%= title %></title>
-    <% } else { %>
-    <title>CNode社区</title>
+    <% if (typeof(title) !== 'undefined'){ %>
+        <title><%= title %></title>
+    <% }else{ %>
+        <title>CNode中文社区</title>
     <% } %>
-    <!--<link href="/styles/style.css" media="screen" rel="stylesheet" type="text/css"/>-->
-    <!--<link href="/styles/common.css" media="screen" rel="stylesheet" type="text/css"/>-->
-    <!--<link href="/styles/sidebar.css" media="screen" rel="stylesheet" type="text/css"/>-->
 
     <!-- style -->
     <%- Loader('/public/styles/style.css')
     .css('/styles/style.css')
     .css('/styles/common.css')
     .css('/public/styles/sidebar.less')
+    .css('/public/styles/content.less')
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
