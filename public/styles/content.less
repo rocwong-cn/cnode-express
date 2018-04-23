@@ -1,3 +1,99 @@
-#content {
+@gray1: #e1e1e1;
+@gray2: #f6f6f6;
+@theme_green: #80bd01;
+@theme_black: #444444;
+@theme_black3: #333333;
 
+#content {
+  padding: 0;
+  margin-right: 320px;
+
+  #tabs {
+    padding: 10px;
+    background-color: #f6f6f6;
+    border-radius: 3px 3px 0 0;
+    .topic-tab {
+      color: @theme_green;
+      margin: 0 10px;
+      text-decoration: none;
+      &:hover {
+        color: #228B22;
+      }
+    }
+    .current-tab {
+      background: @theme_green;
+      color: #ffffff;
+      padding: 3px 4px;
+      border-radius: 3px;
+    }
+  }
+
+  #cell {
+    border-radius: 0 0 3px 3px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #f0f0f0;
+
+    .cell_left {
+      display: flex;
+      align-items: center;
+    }
+    a {
+      text-decoration: none;
+    }
+
+    .avatar {
+      height: 30px;
+      margin-right: 10px;
+      img {
+        width: 30px;
+        height: 30px;
+        border-radius: 3px;
+      }
+    }
+
+    .reply_count {
+      margin-right: 10px;
+      width: 70px;
+      text-align: center;
+
+      .count_of_replies {
+        color: #9e78c0;
+        font-size: 12px;
+        margin: 0;
+      }
+      .count_seperator {
+        margin: 0 -3px;
+        font-size: 10px;
+      }
+      .count_of_visits {
+        font-size: 10px;
+        color: @theme_black;
+        margin: 0;
+
+      }
+    }
+
+    .title_wrapper {
+      a {
+        color: @theme_black3;
+        display: inline-block;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        margin-right: 50px;
+        width: 600px;
+        &:hover {
+          text-decoration: underline;
+        }
+        &:visited {
+          color: @theme_black;
+        }
+      }
+    }
+  }
 }

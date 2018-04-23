@@ -1,6 +1,6 @@
 <% include sidebar.html %>
 <div id="content">
-    <div id="panel">
+    <div id="tabs">
         <% tabs.forEach(function(item){
         var value = item[0];
         var text = item[1]; %>
@@ -8,4 +8,13 @@
            class="topic-tab <%= value === tab ? 'current-tab' : '' %>"><%= text %></a>
         <% }) %>
     </div>
+    <% if(typeof(topics) !== 'undefined' && topics.length>0){ %>
+    <% topics.forEach(function(topic){ %>
+        <% include topic/list.html %>
+    <% }) %>
+    <% } else { %>
+    <div class="inner">
+        <p>无话题</p>
+    </div>
+    <% } %>
 </div>

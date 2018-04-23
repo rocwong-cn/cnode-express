@@ -13,6 +13,7 @@ var expressLayouts = require('express-ejs-layouts');
 var Loader = require('loader');
 var LoaderConnect = require('loader-connect')
 var app = express();
+app.enable('trust proxy');
 
 var config = require('./config');
 
