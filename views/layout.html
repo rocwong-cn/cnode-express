@@ -16,6 +16,12 @@
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
+    <!-- scripts -->
+    <%- Loader('/public/index.min.js')
+    .js('/public/libs/jquery-2.1.0.js')
+    .done(assets, config.site_static_host, config.mini_assets)
+    %>
+
 </head>
 <body>
 <header>
@@ -39,6 +45,5 @@
 <div id="main">
     <%- body %>
 </div>
-
 </body>
 </html>

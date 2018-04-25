@@ -10,11 +10,12 @@
     </div>
     <% if(typeof(topics) !== 'undefined' && topics.length>0){ %>
     <% topics.forEach(function(topic){ %>
-        <% include topic/list.html %>
+    <% include topic/list.html %>
     <% }) %>
     <% } else { %>
     <div class="inner">
         <p>无话题</p>
     </div>
     <% } %>
+    <% include topic/pagination.html %>
 </div>

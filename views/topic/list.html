@@ -8,9 +8,10 @@
         <span class="count_seperator">/</span>
         <span class="count_of_visits" title="点击数"><%= topic.visit_count%></span>
     </span>
+        <% include badge.html %>
         <div class="title_wrapper">
             <a href='/topic/<%= topic._id %>' title='<%= topic.title %>'><%= topic.title %></a>
         </div>
     </div>
-    <span>asda</span>
+    <span><%= base %></span>
 </div>

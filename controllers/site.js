@@ -9,10 +9,11 @@ var Topic = require('../models/topic');
 
 exports.index = function (req, res, next) {
     var tab = req.query.tab || 'all';
-
+    var page = parseInt(req.query.page, 10) || 1;
+    page = page > 0 ? page : 1;
     var proxy = new eventproxy();
     proxy.fail(next);
-    Topic.list({ tab: tab, page: 1 }, proxy.done('topics', function (topics) {
+    Topic.list({ tab: tab, page: page }, proxy.done('topics', function (topics) {
         return topics;
     }));
 
@@ -21,7 +22,9 @@ exports.index = function (req, res, next) {
             tabs: config.tabs,
             title: config.description,
             tab: tab,
-            topics: topics
+            topics: topics,
+            base: '/',
+            current_page: page
         });
     });
 };
