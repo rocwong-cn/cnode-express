@@ -7,7 +7,6 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
-var users = require('./routes/users');
 var ejs = require('ejs');
 var expressLayouts = require('express-ejs-layouts');
 var Loader = require('loader');
@@ -47,7 +46,6 @@ if (config.debug) {
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -61,6 +59,9 @@ _.extend(app.locals, {
     Loader: Loader,
     assets:assets
 });
+
+_.extend(app.locals, require('./common/render_helper'));
+
 
 // error handler
 app.use(function (err, req, res, next) {

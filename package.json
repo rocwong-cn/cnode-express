@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "dev": "DEBUG=express:* node ./bin/www",
     "start": "node ./bin/www",
     "setup": "pm2 deploy ecosystem.config.js production setup",
     "deploy": "pm2 deploy ecosystem.config.js production",
@@ -20,8 +21,12 @@
     "loader": "^2.1.1",
     "loader-builder": "^2.6.0",
     "lodash": "^4.17.5",
+    "markdown-it": "^8.4.1",
     "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "multiline": "^1.0.2",
+    "serve-favicon": "~2.4.2",
+    "validator": "^9.4.1",
+    "xss": "^0.3.8"
   },
   "repository": {
     "type": "git",

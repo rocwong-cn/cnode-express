@@ -20,3 +20,12 @@ exports.list = function (query, callback) {
         return (error);
     });
 };
+
+exports.detail = function (query, callback) {
+    var api = config.api_host.concat('topic/').concat(query);
+    axios.get(api).then(function (response) {
+        return callback(null,response.data.data);
+    }).catch(function (error) {
+        return (error);
+    });
+};

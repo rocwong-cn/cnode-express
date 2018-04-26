@@ -103,4 +103,27 @@ header {
     color: #fff;
 }
 
-/*sidebar*/
+footer {
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+footer .container{
+    padding-top: 8px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.container > p {
+    color: #999;
+}
+
+.container > a {
+    color: #333;
+    text-decoration: none;
+}
+.peace{
+    color: red;
+}

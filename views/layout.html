@@ -2,23 +2,35 @@
 <html lang="en">
 <head>
     <% if (typeof(title) !== 'undefined'){ %>
-        <title><%= title %></title>
+    <title><%= title %></title>
     <% }else{ %>
-        <title>CNode中文社区</title>
+    <title>CNode中文社区</title>
     <% } %>
 
     <!-- style -->
-    <%- Loader('/public/styles/style.css')
+    <%- Loader('/public/styles/index.min.css')
     .css('/styles/style.css')
     .css('/styles/common.css')
     .css('/public/styles/sidebar.less')
     .css('/public/styles/content.less')
+    .css('/public/styles/jquery.atwho.css')
+    .css('/public/libs/code-prettify/prettify.css')
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
     <!-- scripts -->
     <%- Loader('/public/index.min.js')
     .js('/public/libs/jquery-2.1.0.js')
+    .js('/public/libs/lodash.compat.js')
+    .js('/public/libs/jquery-ujs.js')
+    .js('/public/libs/bootstrap/js/bootstrap.js')
+    .js('/public/libs/jquery.caret.js')
+    .js('/public/libs/jquery.atwho.js')
+    .js('/public/libs/markdownit.js')
+    .js('/public/libs/code-prettify/prettify.js')
+    .js('/public/libs/qrcode.js')
+    .js('/public/javascripts/main.js')
+    .js('/public/javascripts/responsive.js')
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
@@ -45,5 +57,12 @@
 <div id="main">
     <%- body %>
 </div>
+<footer>
+    <div class="container">
+        <a href="https://github.com/rocwangv/cnode-express" target="_blank">Github 源码地址</a>
+        <p>CNode 社区为国内最专业的 Node.js 开源技术社区，致力于 Node.js 的技术研究。</p>
+        <span class="peace">Peace ❤️ Love</span>
+    </div>
+</footer>
 </body>
 </html>
