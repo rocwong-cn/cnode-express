@@ -1,12 +1,38 @@
 <div id="content">
     <div class="title-block">
         <h2><%= topic.title %></h2>
-        <span>发布于</span>
-        <span>作者</span>
-        <span> 次浏览</span>
-        <span>来自</span>
+        <span>发布于<%= formatDate(topic.create_at) %></span>
+        <span>作者 <%= topic.author.loginname %></span>
+        <span> <%= topic.visit_count %>次浏览</span>
+        <span>来自<%= tabs[topic.tab] %></span>
     </div>
     <article>
         <%- topic.content %>
     </article>
+    <div class="replies">
+        <p class="total_reply"><%= topic.replies.length %>回复</p>
+        <div class="list">
+            <% if(topic && topic.replies && topic.replies.length > 0){
+            topic.replies.forEach(function(reply,i){
+            %>
+            <div class="reply_item">
+                <div class="reply_header">
+                    <img src="<%= reply.author.avatar_url %>">
+                    <div class="author_panel">
+                        <span class="loginName"><%= reply.author.loginname %></span>
+                        <span class="floor"><%= i+1 %></span>
+                        <span class="date"><%= formatDate(reply.create_at) %></span>
+                        <% if(reply.author.loginname === topic.author.loginname){ %>
+                        <span class="author">作者</span>
+                        <% } %>
+                    </div>
+                </div>
+                <div class="reply_content">
+                    <%- reply.content %>
+                </div>
+            </div>
+            <% })} %>
+
+        </div>
+    </div>
 </div>

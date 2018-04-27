@@ -171,9 +171,75 @@
       content: '·'
     }
   }
-  article{
+  article {
     background: #fff;
     margin: 0;
     padding: 10px;
+    color: #444;
+  }
+  .replies {
+    .total_reply {
+      background-color: #f6f6f6;
+      padding: 10px;
+      border-radius: 3px 3px 0 0;
+      color: #444444;
+      margin-bottom:0;
+    }
+    .list {
+      background-color: #ffffff;
+
+      .reply_item {
+        border-bottom: 1px solid #e7e7e7;
+        .reply_header {
+          height: 35px;
+          padding: 5px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            border: 1px solid #f5f5f5;
+            float: left;
+          }
+          .author_panel {
+            float: left;
+            margin-left: 10px;
+
+            .loginName {
+              font-weight: bold;
+              font-size: 12px;
+            }
+            .floor {
+              font-size: 10px;
+              color: #999;
+            }
+            .floor:after {
+              content: '楼'
+            }
+            .date {
+              font-size: 10px;
+              color: #999;
+            }
+            .author {
+              background-color: @theme_green;
+              color: #ffffff;
+              padding: 3px;
+              border-radius: 3px;
+              font-size: 10px;
+            }
+          }
+        }
+
+        .reply_content {
+          margin-top: -15px;
+          margin-bottom: 10px;
+          padding-left: 40px;
+          padding-right: 20px;
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }

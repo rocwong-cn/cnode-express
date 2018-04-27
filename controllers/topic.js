@@ -8,18 +8,18 @@ var config = require('../config');
 var Topic = require('../models/topic');
 
 exports.detail = function (req, res, next) {
-    console.log('=========+>>>')
     var proxy = new EventProxy();
     proxy.fail(next);
 
     var tid = req.params.tid;
-    Topic.detail( tid, proxy.done('topic_detail', function (topic) {
+    Topic.detail(tid, proxy.done('topic_detail', function (topic) {
         return topic;
     }));
 
     proxy.all('topic_detail', function (topic) {
         res.render('topic/detail', {
-            topic: topic
+            topic: topic,
+            tabs: config.tabs
         });
     });
 };

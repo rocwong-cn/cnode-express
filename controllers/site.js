@@ -17,6 +17,7 @@ exports.index = function (req, res, next) {
         return topics;
     }));
 
+
     proxy.all('topics', function (topics) {
         res.render('index', {
             tabs: config.tabs,

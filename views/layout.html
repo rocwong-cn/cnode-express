@@ -13,24 +13,22 @@
     .css('/styles/common.css')
     .css('/public/styles/sidebar.less')
     .css('/public/styles/content.less')
-    .css('/public/styles/jquery.atwho.css')
-    .css('/public/libs/code-prettify/prettify.css')
+    .css('/styles/jquery.atwho.css')
+    .css('/libs/code-prettify/prettify.css')
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
     <!-- scripts -->
     <%- Loader('/public/index.min.js')
-    .js('/public/libs/jquery-2.1.0.js')
-    .js('/public/libs/lodash.compat.js')
-    .js('/public/libs/jquery-ujs.js')
-    .js('/public/libs/bootstrap/js/bootstrap.js')
-    .js('/public/libs/jquery.caret.js')
-    .js('/public/libs/jquery.atwho.js')
-    .js('/public/libs/markdownit.js')
-    .js('/public/libs/code-prettify/prettify.js')
-    .js('/public/libs/qrcode.js')
-    .js('/public/javascripts/main.js')
-    .js('/public/javascripts/responsive.js')
+    .js('/libs/jquery-2.1.0.js')
+    .js('/libs/lodash.compat.js')
+    .js('/libs/jquery-ujs.js')
+    .js('/libs/jquery.caret.js')
+    .js('/libs/jquery.atwho.js')
+    .js('/libs/markdownit.js')
+    .js('/libs/code-prettify/prettify.js')
+    .js('/javascripts/main.js')
+    .js('/javascripts/responsive.js')
     .done(assets, config.site_static_host, config.mini_assets)
     %>
 
@@ -41,7 +39,7 @@
         <a class="logo" href="/">
             <img src="https://cnodejs.org/public/images/cnodejs_light.svg">
         </a>
-        <form id='search_form' class='navbar-search' action="/search">
+        <form id='search_form' class='navbar-search' action="/">
             <input type='text' id='q' name='q' class='search-query span3' value=''/>
         </form>
         <ul class="menu">

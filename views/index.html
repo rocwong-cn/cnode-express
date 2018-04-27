@@ -1,9 +1,9 @@
 <% include sidebar.html %>
 <div id="content">
     <div id="tabs">
-        <% tabs.forEach(function(item){
-        var value = item[0];
-        var text = item[1]; %>
+        <% var tabKeys = Object.keys(tabs);
+        tabKeys.forEach(function(value){
+        var text = tabs[value]; %>
         <a href="<%= value ? '/?tab=' + value : '/' %>"
            class="topic-tab <%= value === tab ? 'current-tab' : '' %>"><%= text %></a>
         <% }) %>

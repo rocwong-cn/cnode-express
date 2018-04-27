@@ -94,13 +94,7 @@ var config = {
     file_limit: '1MB',
 
     // 版块
-    tabs: [
-        ['all', '全部'],
-        ['good', '精华'],
-        ['share', '分享'],
-        ['ask', '问答'],
-        ['job', '招聘'],
-    ],
+    tabs: { 'all': '全部', 'good': '精华', 'share': '分享', 'ask': '问答', 'job': '招聘' },
 
     create_post_per_day: 1000, // 每个用户一天可以发的主题数
     create_reply_per_day: 1000, // 每个用户一天可以发的评论数

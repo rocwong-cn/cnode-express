@@ -15,7 +15,9 @@ var _          = require('lodash');
 var config     = require('../config');
 var validator  = require('validator');
 var jsxss      = require('xss');
-var multiline = require('multiline')
+var multiline = require('multiline');
+var moment = require('moment');
+
 
 // Set default options
 var md = new MarkdownIt();
@@ -86,6 +88,22 @@ exports.proxy = function (url) {
   // 当 google 和 github 封锁严重时，则需要通过服务器代理访问它们的静态资源
   // return '/agent?url=' + encodeURIComponent(url);
 };
+
+
+moment.locale('zh-cn'); // 使用中文
+
+// 格式化时间
+exports.formatDate = function (date, friendly) {
+    date = moment(date);
+
+    if (friendly) {
+        return date.fromNow();
+    } else {
+        return date.format('YYYY-MM-DD HH:mm');
+    }
+
+};
+
 
 // 为了在 view 中使用
 exports._ = _;
