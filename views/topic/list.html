@@ -10,8 +10,8 @@
     </span>
         <% include badge.html %>
         <div class="title_wrapper">
-            <a href='/topic/<%= topic.id %>' title='<%= topic.title %>'><%= topic.title %></a>
+            <a href='/topic/<%= topic.id %>?user=<%= topic.author.loginname %>' title='<%= topic.title %>'><%= topic.title %></a>
         </div>
     </div>
-    <span><%= base %></span>
+    <span class="create_date"><%= beautifyDate(formatDate(topic.last_reply_at)) %></span>
 </div>

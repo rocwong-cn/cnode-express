@@ -1,0 +1,9 @@
+<div class="author_card">
+    <p class="header">作者</p>
+    <div class="card_content">
+        <img src="<%= userDetail.avatar_url %>"/>
+        <div class="login_name"><%= userDetail.loginname%></div>
+        <p>积分: <%= userDetail.score %></p>
+    </div>
+    <% include ../user/recent_topics.html %>
+</div>

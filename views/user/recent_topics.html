@@ -1,0 +1,10 @@
+<div class="recent_topics">
+    <p class="header">作者其他话题</p>
+    <% if(userDetail.recent_topics && userDetail.recent_topics.length > 0) { %>
+        <% userDetail.recent_topics.forEach(function(item){ %>
+           <p class="topic"><a href="/topic/<%= item.id %>?user=<%= item.author.loginname %>"><%= item.title %></a></p>
+        <% }); %>
+    <% } else { %>
+        <p>暂无其他话题</p>
+    <% } %>
+</div>

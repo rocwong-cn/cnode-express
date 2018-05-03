@@ -86,7 +86,7 @@
         text-overflow: ellipsis;
         overflow: hidden;
         margin-right: 50px;
-        width: 600px;
+        max-width: 550px;
         &:hover {
           text-decoration: underline;
         }
@@ -94,6 +94,11 @@
           color: @theme_black;
         }
       }
+    }
+
+    .create_date {
+      font-size: 12px;
+      color: #777;
     }
   }
 
@@ -176,6 +181,43 @@
     margin: 0;
     padding: 10px;
     color: #444;
+    .markdown-text {
+      img, p img {
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      blockquote {
+        padding: 0 0 0 15px;
+        margin: 0 0 20px;
+        border-left: 5px solid #eee;
+      }
+      pre code {
+        color: inherit;
+        white-space: pre-wrap;
+        background-color: transparent;
+      }
+      table {
+        padding: 0;
+        border-collapse: collapse;
+        border-spacing: 0;
+        font: inherit;
+
+        tr {
+          border-top: 1px solid #ccc;
+          background-color: #fff;
+          margin: 0;
+          padding: 0;
+          th, td {
+            border: 1px solid #ccc;
+            text-align: left;
+            margin: 0;
+            padding: 6px 13px;
+          }
+        }
+      }
+    }
   }
   .replies {
     .total_reply {
@@ -183,7 +225,7 @@
       padding: 10px;
       border-radius: 3px 3px 0 0;
       color: #444444;
-      margin-bottom:0;
+      margin-bottom: 0;
     }
     .list {
       background-color: #ffffff;
@@ -238,8 +280,71 @@
           p {
             margin: 0;
           }
+          img, p img {
+            max-width: 100%;
+          }
         }
       }
+    }
+  }
+}
+
+.author_card {
+  float: right;
+  width: 300px;
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    float: left;
+    margin-right: 10px;
+  }
+  .header {
+    height: 35px;
+    background-color: #f6f6f6;
+    line-height: 35px;
+    border-radius: 3px 3px 0 0;
+    margin: 0;
+    padding-left: 10px;
+
+  }
+  .card_content {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 0 0 3px 3px;
+    p {
+      color: #444;
+    }
+
+  }
+  .login_name {
+    height: 50px;
+    line-height: 50px;
+    color: #888;
+  }
+
+}
+
+.recent_topics {
+  float: right;
+  width: 300px;
+  margin-top: 20px;
+  .header {
+    height: 35px;
+    background-color: #f6f6f6;
+    line-height: 35px;
+    border-radius: 3px 3px 0 0;
+    margin: 0;
+    padding-left: 10px;
+
+  }
+  .topic {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 5px 10px;
+    a{
+      text-decoration: none;
+      color: #666;
     }
   }
 }

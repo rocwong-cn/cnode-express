@@ -1,10 +1,12 @@
+<% include ../user/card.html %>
+
 <div id="content">
     <div class="title-block">
         <h2><%= topic.title %></h2>
-        <span>发布于<%= formatDate(topic.create_at) %></span>
+        <span>发布于 <%= beautifyDate(formatDate(topic.create_at)) %></span>
         <span>作者 <%= topic.author.loginname %></span>
-        <span> <%= topic.visit_count %>次浏览</span>
-        <span>来自<%= tabs[topic.tab] %></span>
+        <span> <%= topic.visit_count %> 次浏览<%= userDetail.score %></span>
+        <span>来自 <%= tabs[topic.tab] %></span>
     </div>
     <article>
         <%- topic.content %>
