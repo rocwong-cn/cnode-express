@@ -28,7 +28,7 @@ module.exports = {
       host : '47.95.218.214',
       ref  : 'origin/master',
       repo : 'git@github.com:rocwangv/cnode-express.git',
-      path : '/home/www/cnode-express',
+      path : '/home/project/cnode-express',
       'post-deploy' : 'npm install && pm2 startOrRestart ecosystem.config.js --env production'
     }
   }
