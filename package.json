@@ -26,7 +26,7 @@
     "morgan": "~1.8.1",
     "multiline": "^1.0.2",
     "serve-favicon": "~2.4.2",
-    "validator": "^9.4.1",
+    "validator": "^13.7.0",
     "xss": "^0.3.8"
   },
   "repository": {
